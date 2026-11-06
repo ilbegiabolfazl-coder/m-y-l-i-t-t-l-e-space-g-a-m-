@@ -1,0 +1,51 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #222;
+    color: white;
+    font-family: Tahoma, sans-serif;
+    margin-top: 50px;
+}
+
+#game-container {
+    width: 90vw;
+    max-width: 600px;
+    height: 200px;
+    border-bottom: 3px solid white;
+    position: relative;
+    overflow: hidden;
+    background-color: #333;
+}
+
+#player {
+    width: 30px;
+    height: 30px;
+    background-color: #4CAF50; /* رنگ سبز */
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+    border-radius: 5px;
+}
+
+#obstacle {
+    width: 20px;
+    height: 40px;
+    background-color: #f44336; /* رنگ قرمز */
+    position: absolute;
+    bottom: 0;
+    right: -20px; /* در ابتدا خارج از صفحه است */
+}
+
+/* انیمیشن پرش */
+.jump {
+    animation: jumpAnimation 0.5s linear;
+}
+
+@keyframes jumpAnimation {
+    0% { bottom: 0; }
+    30% { bottom: 80px; }
+    50% { bottom: 100px; }
+    70% { bottom: 80px; }
+    100% { bottom: 0; }
+}
